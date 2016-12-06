@@ -33,6 +33,28 @@ class LinkedStack:
         self.size -= 1
         return answer
 
-    def Merge_Lists(self,x,y):
-        y.element.next = x.element
+    def Sort(self,x,y):
+        sorted = LinkedStack
+        if x.head >= y.head:
+            sorted.head = x.head
+        else:
+            sorted.head = y.head
+        while x.next != None and y.next != None:
+            if x.next < y.next:
+                sorted.next = y.next
+            else:
+                sorted.next = x.next
 
+a = LinkedStack()
+a.push(3)
+a.push(5)
+a.push(7)
+
+b = LinkedStack()
+b.push(2)
+b.push(3)
+b.push(4)
+
+c = LinkedStack
+c.Sort(a,b)
+print c
